@@ -1,7 +1,0 @@
-Name - 
- |DoB - Thiranjaya
- |Address - ion Tec |Course - 2003/03/07
- |Year - Infomat
-Name - 
- | DoB - 2003/03/07 | Address - 
- | Course - IT | Year - 2023/24
