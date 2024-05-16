@@ -4,7 +4,7 @@
 #include <string.h>
 #include <math.h>
 
-char number[5], name[100], Adress[100], year[5], course[50];
+char number[5], name[100], Adress[1000], year[5], course[50];
 
 // function to add new students
 void enter_details(FILE *studentDetails)
@@ -28,7 +28,7 @@ void enter_details(FILE *studentDetails)
 }
 
 // function to count students.
-void count_students()
+void count_students(FILE *studentDetails)
 {
 }
 
@@ -61,7 +61,7 @@ int main(int argc, char const *argv[])
         break;
 
     case 2:
-        count_students();
+        count_students(studentDetails);
 
     default:
         break;
