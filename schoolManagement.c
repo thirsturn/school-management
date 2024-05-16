@@ -4,6 +4,16 @@
 #include <string.h>
 #include <math.h>
 
+// structure for entering data
+struct StudentDetails
+{
+    char name[100];
+    char DoB[20];
+    char Address[100];
+    char course[50];
+    char year[5];
+} S[10000];
+
 // function to add new students
 void enter_details()
 {
@@ -28,18 +38,6 @@ int main(int argc, char const *argv[])
 
     // Declare the variables
     int command;
-
-    // structure for entering data
-    struct StudentDetails
-    {
-        char name[100];
-        char DoB[20];
-        char Address[100];
-        char course[50];
-        char year[5];
-    };
-
-    struct StudentDetails S[10000];
 
     // index for operations
     printf("1\tEnter Details.\n");
