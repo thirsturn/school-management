@@ -4,32 +4,27 @@
 #include <string.h>
 #include <math.h>
 
-// structure for entering data
-struct StudentDetails
-{
-    char name[100];
-    char DoB[20];
-    char Address[100];
-    char course[50];
-    char year[5];
-} S[10000];
+char number[5], name[100], Adress[100], year[5], course[50];
 
 // function to add new students
-void enter_details()
+void enter_details(FILE *studentDetails)
 {
-    for (int i = 0; i < 100; i++)
-    {
-        scanf("%s", &S[i].name);
-        scanf("%s", &S[i].DoB);
-        scanf("%s", &S[i].Address);
-        scanf("%s", &S[i].course);
-        scanf("%s", &S[i].year);
-    }
-}
+    printf("Enter number : ");
+    scanf("%s", &number);
 
-// functions to find students
-void find_student()
-{
+    printf("Enter name : ");
+    scanf("%s", &name);
+
+    printf("Enter Address : ");
+    scanf("%s", &Adress);
+
+    printf("Enter year : ");
+    scanf("%s", &year);
+
+    printf("Enter course : ");
+    scanf("%s", &course);
+
+    fprintf(studentDetails, "ID :%s |Name :%s |Address :%s |Year :%s |course :%s |", number, name, Adress, year, course);
 }
 
 // function to count students.
@@ -47,11 +42,14 @@ int main(int argc, char const *argv[])
     // Declare the variables
     int command;
 
+    // open the School.txt file
+    FILE *studentDetails;
+    studentDetails = fopen("School.txt", "a+");
+
     // index for operations
     printf("1\tEnter Details.\n");
-    printf("2\tFind Student from number.\n");
-    printf("3\tFind student from first name.\n");
-    printf("3\tCount students\n");
+
+    printf("2\tCount students\n");
 
     printf("Enter command number...");
     scanf("%d", &command);
@@ -59,19 +57,16 @@ int main(int argc, char const *argv[])
     switch (command)
     {
     case 1:
-        enter_details();
+        enter_details(studentDetails);
         break;
 
     case 2:
-        find_student();
-        break;
-
-    case 3:
         count_students();
 
     default:
         break;
     }
 
+    fclose(studentDetails);
     return 0;
 }
