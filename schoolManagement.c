@@ -17,6 +17,14 @@ struct StudentDetails
 // function to add new students
 void enter_details()
 {
+    for (int i = 0; i < 100; i++)
+    {
+        scanf("%s", &S[i].name);
+        scanf("%s", &S[i].DoB);
+        scanf("%s", &S[i].Address);
+        scanf("%s", &S[i].course);
+        scanf("%s", &S[i].year);
+    }
 }
 
 // functions to find students
