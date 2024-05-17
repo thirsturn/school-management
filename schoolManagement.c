@@ -30,6 +30,15 @@ void enter_details(FILE *studentDetails)
 // function to count students.
 void count_students(FILE *studentDetails)
 {
+    char Data[100000];
+
+    int i = 0;
+
+    while (fgets(Data, sizeof(Data), studentDetails))
+    {
+        i += 1;
+    }
+    printf("%d", i);
 }
 
 // function to update details
