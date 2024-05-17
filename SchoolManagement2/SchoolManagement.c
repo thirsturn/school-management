@@ -10,12 +10,27 @@ struct SchoolManagement
     char lname[20];
     char course[50];
     char academic_year[7];
-};
+} student[1000];
 
 int i = 0;
 
 void add_student()
 {
+    printf("Add the student\n\n");
+
+    printf("First name\t:");
+    scanf("%s", &student[i].fname);
+
+    printf("Last name\t:");
+    scanf("%s", &student[i].lname);
+
+    printf("Course\t:");
+    scanf("%s", &student[i].course);
+
+    printf("Academic Year\t:");
+    scanf("%s", &student[i].academic_year);
+
+    i = i + 1;
 }
 
 void find_from_fname()
