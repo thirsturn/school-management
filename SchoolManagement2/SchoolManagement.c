@@ -47,6 +47,7 @@ void find_from_course()
 
 void count()
 {
+    printf("Total number of students %d", i);
 }
 
 void update()
